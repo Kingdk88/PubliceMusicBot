@@ -7,6 +7,7 @@ RUN apt-get update \
 
 COPY . /app/
 WORKDIR /app/
+RUN pip3 install yt-dlp==2023.12.30
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 CMD bash start
